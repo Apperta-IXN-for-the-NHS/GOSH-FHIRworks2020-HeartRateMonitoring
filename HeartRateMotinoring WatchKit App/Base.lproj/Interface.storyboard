@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="15705" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch38"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="15501"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="HeartRateMotinoring_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <group width="1" alignment="left" id="Bdj-xP-Nu4">
+                            <items>
+                                <label width="136" alignment="left" text="Heart Rate" textAlignment="center" id="coL-sA-vqF">
+                                    <fontDescription key="font" style="UICTFontTextStyleTitle3"/>
+                                </label>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" id="nrM-7t-Eu2">
+                            <items>
+                                <label alignment="left" text="... BPM" id="P2K-cO-7hK"/>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" id="BZg-dv-7Hv">
+                            <items>
+                                <timer alignment="left" id="ZhO-ka-wVG"/>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" id="FLZ-Nf-UrH">
+                            <items>
+                                <dateLabel alignment="left" id="j4K-AM-rGK">
+                                    <dateFormatterStyle key="dateStyle" short="YES"/>
+                                    <dateFormatterStyle key="timeStyle" short="YES"/>
+                                </dateLabel>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" id="xij-Yh-rm7">
+                            <items>
+                                <button width="1" alignment="left" title="Start Measuring" id="3H3-Uh-RiU">
+                                    <connections>
+                                        <action selector="buttonPressed" destination="AgC-eL-Hgc" id="uT7-e9-MHP"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="activityButton" destination="3H3-Uh-RiU" id="es5-kl-erN"/>
+                        <outlet property="dateAndTime" destination="j4K-AM-rGK" id="cXZ-8V-ZPF"/>
+                        <outlet property="heartRateLabel" destination="P2K-cO-7hK" id="0xu-oe-cgU"/>
+                        <outlet property="timer" destination="ZhO-ka-wVG" id="QKs-Qk-seL"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="34" y="31"/>
+        </scene>
+    </scenes>
+</document>
